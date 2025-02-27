@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 
 void storeGrade(int n, int arr[2][n], char grades[]) {
-    for (int i = 0; i < n; i++) { 
+    for (int i = 0; i < n; i++) {
         int marks = arr[1][i];
         grades[i] = (marks >= 80) ? 'A' : (marks >= 60) ? 'B' : (marks >= 40) ? 'C' : 'F';
     }
@@ -39,10 +40,10 @@ int main() {
 
             int rollnum = atoi(roll);
             int found = 0;
-            for (int i = 0; i < n && !found; i++) { 
+            for (int i = 0; i < n && !found; i++) {
                 if (arr[0][i] == rollnum) {
                     printf("The grade of the student roll:%d is: %c\n", rollnum, grades[i]);
-                    found = 1; 
+                    found = 1;
                 }
             }
 
